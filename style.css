@@ -1,0 +1,630 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8faf8;
+    color:#222;
+    overflow-x:hidden;
+    line-height:1.6;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar{
+    background:#0d7a2f;
+    color:white;
+    text-align:center;
+    padding:10px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:999;
+    background:white;
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+}
+
+.nav{
+    height:80px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo img{
+    height:55px;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#333;
+    font-weight:600;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#0d7a2f;
+}
+
+.order-btn{
+    background:#0d7a2f;
+    color:white;
+    padding:14px 25px;
+    border-radius:10px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.order-btn:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero{
+    position:relative;
+    min-height:90vh;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.88),
+        rgba(255,255,255,.88)
+    ),
+    url('../images/hero-banner.jpg');
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:#e5f8ea;
+    color:#0d7a2f;
+    padding:12px 22px;
+    border-radius:50px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero-content h1{
+    font-size:72px;
+    line-height:1.1;
+    margin-bottom:20px;
+    font-weight:800;
+}
+
+.hero-content p{
+    font-size:20px;
+    color:#555;
+    margin-bottom:25px;
+}
+
+.hero-points{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:30px;
+}
+
+.hero-points div{
+    background:white;
+    padding:12px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+    font-weight:600;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    background:#0d7a2f;
+    color:white;
+    padding:15px 28px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+.btn-whatsapp{
+    background:#25D366;
+    color:white;
+    padding:15px 28px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:550px;
+    margin:auto;
+
+    filter:
+    drop-shadow(
+        0 20px 40px rgba(0,0,0,.25)
+    );
+
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* =========================
+   TRUST SECTION
+========================= */
+
+.trust{
+    padding:80px 0;
+    background:white;
+}
+
+.trust-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:25px;
+}
+
+.trust-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.trust-card h2{
+    color:#0d7a2f;
+    font-size:42px;
+    margin-bottom:10px;
+}
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:50px;
+    font-weight:800;
+}
+
+/* =========================
+   PRODUCT SECTION
+========================= */
+
+.product{
+    padding:100px 0;
+}
+
+.product-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:40px;
+}
+
+.product-card{
+    position:relative;
+    background:white;
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.product-card img{
+    height:280px;
+    object-fit:contain;
+    margin:auto;
+}
+
+.product-card h3{
+    margin:20px 0;
+    font-size:28px;
+}
+
+.price{
+    font-size:42px;
+    font-weight:800;
+    color:#0d7a2f;
+    margin-bottom:20px;
+}
+
+.product-card ul{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.product-card li{
+    margin-bottom:10px;
+}
+
+.card-btn{
+    display:inline-block;
+    background:#0d7a2f;
+    color:white;
+    padding:14px 28px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+.featured{
+    border:3px solid #0d7a2f;
+}
+
+.popular{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:#ffb703;
+    color:#222;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:700;
+}
+/* =========================
+   COMBO SECTION
+========================= */
+
+.combo{
+    padding:100px 0;
+    background:#f3f8f4;
+}
+
+.combo-card{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    border-radius:25px;
+    padding:40px;
+    text-align:center;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+    position:relative;
+}
+
+.combo-badge{
+    position:absolute;
+    top:-15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#ffb703;
+    color:#222;
+    padding:10px 25px;
+    border-radius:30px;
+    font-weight:700;
+}
+
+.combo-card img{
+    width:300px;
+    margin:20px auto;
+    border-radius:15px;
+}
+
+.old-price{
+    font-size:24px;
+    text-decoration:line-through;
+    color:#888;
+}
+
+.combo-price{
+    font-size:58px;
+    font-weight:800;
+    color:#0d7a2f;
+    margin:10px 0;
+}
+
+.combo-btn{
+    display:inline-block;
+    margin-top:20px;
+    background:#0d7a2f;
+    color:white;
+    padding:15px 30px;
+    border-radius:12px;
+    font-weight:700;
+}
+
+/* =========================
+   REVIEWS
+========================= */
+
+.reviews{
+    padding:100px 0;
+    background:white;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.review-card{
+    background:#fff;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.stars{
+    color:#ffb703;
+    font-size:24px;
+    margin-bottom:15px;
+}
+
+.review-card p{
+    margin-bottom:15px;
+    color:#555;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    padding:100px 0;
+    background:#f8faf8;
+}
+
+.faq-item{
+    background:white;
+    margin-bottom:20px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+.faq-item h3{
+    color:#0d7a2f;
+    margin-bottom:10px;
+}
+
+/* =========================
+   ORDER FORM
+========================= */
+
+.order{
+    padding:100px 0;
+    background:white;
+}
+
+#orderForm{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+#orderForm input,
+#orderForm textarea,
+#orderForm select{
+    width:100%;
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+    outline:none;
+}
+
+#orderForm textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+#orderForm button{
+    border:none;
+    background:#0d7a2f;
+    color:white;
+    padding:18px;
+    border-radius:12px;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#orderForm button:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#0d7a2f;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer-content h3{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.footer-content p{
+    margin:8px 0;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+
+.floating-whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:32px;
+    z-index:9999;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:.3s;
+}
+
+.floating-whatsapp:hover{
+    transform:scale(1.1);
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+.hero-grid,
+.product-grid,
+.review-grid{
+    grid-template-columns:1fr;
+}
+
+.trust-grid{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.hero-content h1{
+    font-size:50px;
+}
+
+}
+
+@media(max-width:768px){
+
+.nav{
+    flex-direction:column;
+    height:auto;
+    padding:15px 0;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    margin:15px 0;
+}
+
+.hero{
+    padding:80px 0;
+}
+
+.hero-content h1{
+    font-size:38px;
+}
+
+.hero-content p{
+    font-size:16px;
+}
+
+.hero-points{
+    grid-template-columns:1fr;
+}
+
+.trust-grid{
+    grid-template-columns:1fr;
+}
+
+.section-title{
+    font-size:32px;
+}
+
+.combo-price{
+    font-size:42px;
+}
+
+}
+
+@media(max-width:480px){
+
+.btn-primary,
+.btn-whatsapp,
+.order-btn{
+    width:100%;
+    text-align:center;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.product-card,
+.combo-card,
+.review-card{
+    padding:20px;
+}
+
+}
