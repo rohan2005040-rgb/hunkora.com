@@ -1,19 +1,22 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.getElementById("orderForm");
 
-    if(form){
+    if (!form) {
+        console.log("Form Not Found");
+        return;
+    }
 
-        form.addEventListener("submit", function(e){
+    form.addEventListener("submit", function(e){
 
-            e.preventDefault();
+        e.preventDefault();
 
-            const name = document.getElementById("name").value;
-            const phone = document.getElementById("phone").value;
-            const address = document.getElementById("address").value;
-            const product = document.getElementById("product").value;
+        const name = document.getElementById("name").value.trim();
+        const phone = document.getElementById("phone").value.trim();
+        const address = document.getElementById("address").value.trim();
+        const product = document.getElementById("product").value;
 
-            const message =
+        const message =
 `🛒 Hunkora Banana Chips Order
 
 👤 নাম: ${name}
@@ -24,13 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 📦 পণ্য: ${product}`;
 
-            const whatsapp =
+        const whatsappURL =
 `https://wa.me/8801820232682?text=${encodeURIComponent(message)}`;
 
-            window.open(whatsapp,"_blank");
-
-        });
-
-    }
+        window.open(whatsappURL, "_blank");
+    });
 
 });
